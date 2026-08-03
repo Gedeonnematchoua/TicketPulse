@@ -1,2 +1,2 @@
 Besoins fonctionnels
-critères d'acceptation
+et critères d'acceptation
