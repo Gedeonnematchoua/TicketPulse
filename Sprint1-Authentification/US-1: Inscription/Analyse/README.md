@@ -1,5 +1,5 @@
 
-# Analyse Fonctionnelle - US1 Inscription
+# Analyse Fonctionnelle 
 
 ## Description
 Un nouvel utilisateur doit créer un compte TicketPulse afin d'accéder à la plateforme de billetterie.
