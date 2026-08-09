@@ -1,0 +1,21 @@
+Analyse des besoins (listes d'événements par catégories) et critères d'acceptation.
+
+Un acheteur peux rechercher un événement par nom, ville ou date afin de trouver rapidement l'évènement qu'il recherche.
+1. Besoin fonctionnels
+Le système doit :
+- Permettre une recherche par mot-clé (nom de l'artiste, de l'événement ou du lieu).
+- Permettre de filtrer les résultats par ville, par date et par catégorie (concert, festival, sportif).
+- Afficher, pour chaque résultat, un indicateur de disponibilité approximative (complet / places restantes / bientôt complet).
+- Afficher un message clair lorsqu'aucun événement ne correspond à la recherche.
+- Permettre de consulter la fiche détaillée d'un événement (date, lieu, prix, plan de salle) à partir des résultats de recherche.
+  
+3. Critères d'acceptation
+- Le système retourne les résultats correspondant au texte recherché et aux filtres (ville, date, catégorie).
+-	Les résultats affichent la disponibilité approximative (complet / places restantes).
+-	Aucun résultat = message clair, pas d'erreur technique.
+-	Les résultats s'affichent en moins de 2 secondes, même en période de forte affluence.
+
+2. Exigences non fonctionnelles associées
+-	Temps de réponse < 2 secondes.
+-	Doit rester fonctionnel même à 250 000 utilisateurs connectés simultanément.
+-	La disponibilité affichée peut tolérer un léger délai de rafraîchissement (cohérence éventuelle acceptable), contrairement à la réservation du siège qui exige une cohérence forte.
