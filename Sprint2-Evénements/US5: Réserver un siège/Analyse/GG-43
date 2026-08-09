@@ -5,7 +5,7 @@ Besoins fonctionnelles
 Le système doit permettre à l'acheteur de sélectionner un siège spécifique sur le plan de salle.
 - Le système doit placer le siège sélectionné en état « retenu » immédiatement après la sélection.
 - masquer ou marquer comme indisponible un siège retenu pour tous les autres utilisateurs.
-- automatiquement un siège retenu si le paiement n'est pas complété dans le délai imparti.
+- automatiquement un siège retenu si le paiement n'est pas complété dans un délai de 24h.
 - garantir qu'une seule requête réussit en cas de tentative simultanée sur le même siège, et retourner un refus explicite à l'autre.
 - Le système doit informer l'acheteur du temps restant avant l'expiration de sa réservation temporaire.
 
@@ -15,10 +15,14 @@ Critères d'acceptation
 -	Deux requêtes simultanées sur le même siège → une seule réussit, l'autre reçoit un refus explicite.
 
 Exigences non fonctionnelles associées
--	Aucune surréservation, même sous 50 000 req/s.
--	Finalisation du paiement en moins de 5 minutes (exigence explicite).
+-	Aucune surréservation ou double réservation même sous 50 000 req/s.
 -	Cohérence forte requise sur l'état du siège (contrairement à la recherche, qui tolère une cohérence éventuelle).
-Hypothèses posées
+- Le temps de réponse doit etre de moins de 2 secondes.
 
-•	H4 : la durée du hold est fixée à 5 minutes, alignée directement sur l'exigence de finalisation du paiement — impact : ce TTL doit être appliqué dans Redis (expiration automatique) plutôt que géré manuellement.
-•	H5 : lors d'une vente flash, un seul événement à très forte demande est en vente à la fois — impact : permet de partitionner (sharder) la base de données par eventId sans craindre plusieurs pics simultanés qui sursaturent des partitions différentes en même temps.
+Hypothèses posées:
+
+H1 : la durée du hold est fixée à 5 minutes, alignée directement sur l'exigence de finalisation du paiement ;
+— impact : ce TTL doit être appliqué dans Redis (expiration automatique) plutôt que géré manuellement.
+
+H2 : lors d'une vente flash, un seul événement à très forte demande est en vente à la fois 
+— impact : permet de partitionner (sharder) la base de données par eventId sans craindre plusieurs pics simultanés qui sursaturent des partitions différentes en même temps.
