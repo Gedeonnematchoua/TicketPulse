@@ -5,7 +5,7 @@ Besoins fonctionnelles
 Le système doit permettre à l'acheteur de sélectionner un siège spécifique sur le plan de salle.
 - Le système doit placer le siège sélectionné en état « retenu » immédiatement après la sélection.
 - masquer ou marquer comme indisponible un siège retenu pour tous les autres utilisateurs.
-- automatiquement un siège retenu si le paiement n'est pas complété dans un délai de 24h.
+- automatiquement un siège retenu si le paiement n'est pas complété dans un délai de 1h.
 - garantir qu'une seule requête réussit en cas de tentative simultanée sur le même siège, et retourner un refus explicite à l'autre.
 - Le système doit informer l'acheteur du temps restant avant l'expiration de sa réservation temporaire.
 
