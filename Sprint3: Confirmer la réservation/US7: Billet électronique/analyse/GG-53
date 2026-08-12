@@ -1,0 +1,19 @@
+Analyse de la billeterie électronique
+
+Le système, dois générer un billet avec QR code après un paiement réussi afin que l'acheteur puisse présenter son billet à l'entrée de l'évènement.
+
+##Besoins fonctionnels
+Le système doit :
+- Générer automatiquement un billet électronique dès la confirmation réussie du paiement.
+- Générer un code QR unique et non réutilisable pour chaque billet.
+- Enregistrer le billet généré (association billet ↔ siège ↔ acheteur ↔ événement).
+- Permettre la validation du QR code à l'entrée, en marquant le billet comme « utilisé » après un premier scan.
+- Rendre le billet disponible en téléchargement dans l'historique des achats de l'acheteur.
+
+##Critères d'acceptation
+- Le QR code est unique par billet et non réutilisable (validation à l'entrée = usage unique).
+- Le billet est généré en moins de X secondes après confirmation du paiement.
+
+##Hypothèses posées
+•	H7 : taille moyenne d'un billet généré (PDF + QR encodé) ≈ 150–300 Ko — utile pour dimensionner le stockage et la bande passante de livraison par courriel.
+
