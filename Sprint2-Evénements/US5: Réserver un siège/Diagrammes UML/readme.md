@@ -1,6 +1,8 @@
 I. DIAGRAMME DE CAS D'UTILISATION: RESERVER UN SIEGE
-<img width="624" height="380" alt="Image4" src="https://github.com/user-attachments/assets/4c3629db-84e5-4bb7-a84b-7b7940cb5ecc" />
+<img width="1448" height="1086" alt="ChatGPT Image 11 août 2026, 23 h 29 min 30 s (1)" src="https://github.com/user-attachments/assets/0e10dd80-1a58-4c9d-a319-74b4e7102294" />
+
 
 II. DIAGRAMME DE SEQUENCE CORRESPONDANT
-<img width="1800" height="1718" alt="TicketPulse_US2_Diagramme_Sequence (1)" src="https://github.com/user-attachments/assets/6b1e6928-39b1-4f4e-bb6f-b18c1769c8aa" />
+<img width="1448" height="1086" alt="ChatGPT Image 11 août 2026, 23 h 29 min 31 s (2)" src="https://github.com/user-attachments/assets/c5782d24-a196-447a-80a3-67b0fd7eb9bb" />
+
 
